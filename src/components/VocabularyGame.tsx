@@ -4,15 +4,7 @@ import AnswerOptions from './AnswerOptions';
 import ScoreDisplay from './ScoreDisplay';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
-
-// Sample vocabulary data - replace with your actual data
-const vocabularyData = [
-  { english: "Hello", hebrew: "שלום" },
-  { english: "Goodbye", hebrew: "להתראות" },
-  { english: "Thank you", hebrew: "תודה" },
-  { english: "Please", hebrew: "בבקשה" },
-  { english: "Good morning", hebrew: "בוקר טוב" },
-];
+import { vocabularyData } from '@/data/vocabularyData';
 
 const VocabularyGame = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
