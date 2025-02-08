@@ -19,5 +19,17 @@ export const vocabularyData: VocabularyItem[] = [
   { english: "Water", hebrew: "מים" },
   { english: "Food", hebrew: "אוכל" },
   { english: "House", hebrew: "בית" },
-  { english: "Car", hebrew: "מכונית" }
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+  { english: "Car", hebrew: "מכונית" },
+   { english: "Car", hebrew: "מכונית" }
 ];
