@@ -1,3 +1,4 @@
+
 export interface VocabularyItem {
   english: string;
   hebrew: string;
@@ -5,7 +6,6 @@ export interface VocabularyItem {
 
 export const vocabularyData: VocabularyItem[] = [
   // Add more words here:
-  [
   { english: "a hundred", hebrew: "מאה" },
   { english: "a lot of", hebrew: "הרבה" },
   { english: "age", hebrew: "גיל" },
