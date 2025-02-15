@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import WordCard from './WordCard';
 import AnswerOptions from './AnswerOptions';
@@ -7,6 +8,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { vocabularyData } from '@/data/vocabularyData';
 
 const VocabularyGame = () => {
+  const [gameWords, setGameWords] = useState(vocabularyData.slice(0, 30));
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [options, setOptions] = useState<string[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<string>();
@@ -14,16 +16,29 @@ const VocabularyGame = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const { toast } = useToast();
 
-  const currentWord = vocabularyData[currentWordIndex];
+  // Get random words at the start of each game
+  useEffect(() => {
+    const getRandomWords = () => {
+      const shuffled = [...vocabularyData].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, 30);
+    };
+    setGameWords(getRandomWords());
+  }, []);
+
+  const currentWord = gameWords[currentWordIndex];
 
   useEffect(() => {
-    generateOptions();
-  }, [currentWordIndex]);
+    if (currentWord) {
+      generateOptions();
+    }
+  }, [currentWordIndex, currentWord]);
 
   const generateOptions = () => {
-    const correctAnswer = vocabularyData[currentWordIndex].hebrew;
+    if (!currentWord) return;
+    
+    const correctAnswer = currentWord.hebrew;
     const otherOptions = vocabularyData
-      .filter((item, index) => index !== currentWordIndex)
+      .filter(item => item.hebrew !== correctAnswer)
       .map(item => item.hebrew)
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
@@ -62,21 +77,23 @@ const VocabularyGame = () => {
   };
 
   const handleNext = () => {
-    if (currentWordIndex < vocabularyData.length - 1) {
+    if (currentWordIndex < gameWords.length - 1) {
       setCurrentWordIndex(prev => prev + 1);
       setSelectedAnswer(undefined);
       setIsAnswered(false);
     } else {
       toast({
         title: "Game Complete!",
-        description: `Final score: ${score}/${vocabularyData.length}`,
+        description: `Final score: ${score}/${gameWords.length}`,
       });
     }
   };
 
+  if (!currentWord) return null;
+
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <ScoreDisplay score={score} total={vocabularyData.length} />
+      <ScoreDisplay score={score} total={gameWords.length} />
       
       <WordCard 
         word={currentWord.english}
@@ -91,7 +108,7 @@ const VocabularyGame = () => {
         correctAnswer={currentWord.hebrew}
       />
       
-      {isAnswered && currentWordIndex < vocabularyData.length - 1 && (
+      {isAnswered && currentWordIndex < gameWords.length - 1 && (
         <Button
           onClick={handleNext}
           className="mt-8 w-full"
