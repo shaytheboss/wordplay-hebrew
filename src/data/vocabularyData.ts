@@ -37,7 +37,7 @@ export const vocabularyData: VocabularyItem[] = [
   { english: "flat", hebrew: "שטוח" },
   { english: "cheap", hebrew: "זול" },
   { english: "heavy", hebrew: "כבד" },
-  { english: "Begin", hebrew: להתחיל" },
+  { english: "Begin", hebrew: "להתחיל" },
   { english: "Beautiful", hebrew: "יפה" },
   { english: "break", hebrew: "לשבור" },
   { english: "call", hebrew: "לצלצל" },
