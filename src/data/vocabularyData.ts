@@ -37,5 +37,21 @@ export const vocabularyData: VocabularyItem[] = [
   { english: "flat", hebrew: "שטוח" },
   { english: "cheap", hebrew: "זול" },
   { english: "heavy", hebrew: "כבד" },
+  { english: "Begin", hebrew: להתחיל" }
+  { english: "Beautiful", hebrew: "יפה" }
+  { english: "break", hebrew: "לשבור" }
+  { english: "call", hebrew: "לצלצל" }
+  { english: "blanket", hebrew: "שמיכה" }
+  { english: "brush", hebrew: "להבריש" }
+  { english: "cry", hebrew: "לבכות" }
+  { english: "fast", hebrew: "מהיר" }
+  { english: "important", hebrew: "חשוב" }
+  { english: "like", hebrew: "לאהוב" }
+  { english: "hard", hebrew: "קשה" }
+  { english: "nice", hebrew: "נחמד" }
+  { english: "take care of", hebrew: "לטפל/לדאוג" }
+  { english: "pool", hebrew: "בריכה" }
+  { english: "fast", hebrew: "מהיר" }
+  { english: "fast", hebrew: "מהיר" }
   { english: "Car", hebrew: "מכונית" }
 ];
