@@ -51,7 +51,20 @@ export const vocabularyData: VocabularyItem[] = [
   { english: "nice", hebrew: "נחמד" }
   { english: "take care of", hebrew: "לטפל/לדאוג" }
   { english: "pool", hebrew: "בריכה" }
-  { english: "fast", hebrew: "מהיר" }
-  { english: "fast", hebrew: "מהיר" }
-  { english: "Car", hebrew: "מכונית" }
+  { english: "put", hebrew: "לשים/להניח" }
+  { english: "special", hebrew: "מיוחד" }
+  { english: "young", hebrew: "צעיר" }
+  { english: "toy", hebrew: "צעצוע" }
+  { english: "win", hebrew: "לנצח/לזכות" }
+  { english: "use", hebrew: "להשתמש" }
+  { english: "wait", hebrew: "לחכות" }
+  { english: "wash", hebrew: "לשטוף/לרחוץ" } 
+  { english: "hobby", hebrew: "תחביב" }
+  { english: "find", hebrew: "למצוא" }
+  { english: "give", hebrew: "לתת" }
+  { english: "learn", hebrew: "ללמוד" }
+  { english: "old", hebrew: "זקן/ישן" }
+  { english: "tall", hebrew: "גבוה" }
+  { english: "short", hebrew: "נמוך/קצר" }
+  { english: "different", hebrew: "שונה" }
 ];
